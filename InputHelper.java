@@ -52,13 +52,13 @@ public class InputHelper {
             String line = scanner.nextLine().trim();
             try {
                 int v = Integer.parseInt(line);
-                if (v >= 0) {
+                if (v > 0) {
                     return v;
                 }
             } catch (NumberFormatException ignored) {
                 // retry
             }
-            System.out.println("Enter a non-negative integer.");
+            System.out.println("Enter a positive integer.");
         }
     }
 
