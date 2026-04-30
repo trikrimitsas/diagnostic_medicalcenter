@@ -65,3 +65,11 @@ Keep future commits focused on one logical change. Pull requests should include 
 ## Agent-Specific Instructions
 
 Do not commit generated `.class` files. Preserve the no-package structure. Avoid broad rewrites unless required for assignment correctness.
+
+## Cursor Cloud specific instructions
+
+- **JDK**: OpenJDK 21 is pre-installed. The update script runs `javac *.java` so `.class` files are ready at session start.
+- **No lint / test framework**: There is no linter or automated test runner. Validation is done by compiling (`javac *.java`) and piping stdin to the CLI. See the skill file at `.cursor/skills/diagnostic-center-cloud-runbook/SKILL.md` for copy-paste `printf` patterns.
+- **Data files are stateful**: The CLI reads/writes `doctors.txt`, `patients.txt`, `exams.txt`, `appointments.txt` in the working directory. After testing, restore originals with `git checkout -- *.txt` to avoid polluting committed sample data.
+- **Date format**: Appointment dates use `dd:MM:yyyy` (colon-separated, not slash or dash).
+- **Incomplete dataset error**: If only some of the four `.txt` files are present, the app prints an error and exits immediately. Either have all four or none (none triggers first-run seed).
