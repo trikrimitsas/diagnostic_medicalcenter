@@ -1,0 +1,10 @@
+IMAGING,1,Imaging,XRAY,10,30.0,2,X-Ray
+MICRO,2,Microbiological,PCR,20,20.0,3,Blood
+SPEC,3,Specialized,Stress,3,80.0,1,Cardiology
+SPEC,4,Specialized,Holter,5,50.0,1,Cardiology
+SPEC,5,Specialized,EEG,10,20.0,4,Neurology
+IMAGING,6,Imaging,MRI_Scan,5,100.0,2,MRI
+MICRO,7,Microbiological,Urine_Panel,15,25.0,3,Urine
+SPEC,8,Specialized,SPT,12,40.0,4,Pulmonology
+IMAGING,9,Imaging,CT_Chest,6,90.0,2,CT
+MICRO,10,Microbiological,Throat_Culture,18,35.0,3,Swab
